@@ -18,13 +18,16 @@
     "web-vitals": "^1.1.1"
   },
   "scripts": {
-    "lint": "eslint ./src --fix",
+    "lint": "eslint . --ignore-path .gitignore",
+    "format": "prettier --write . --ignore-path .gitignore",
+    "fix-style": "npm run format & npm run lint -- --fix",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "deploy": "gh-pages -d build",
+    "prepare": "husky install"
   },
   "eslintConfig": {
     "extends": [
@@ -48,6 +51,12 @@
     "@mate-academy/eslint-config-react-typescript": "^0.0.4",
     "eslint": "^7.25.0",
     "gh-pages": "^3.1.0",
-    "node-sass": "^5.0.0"
+    "husky": "^8.0.3",
+    "lint-staged": "^13.2.1",
+    "node-sass": "^5.0.0",
+    "prettier": "2.8.7"
+  },
+  "lint-staged": {
+    "*.ts": "npm run lint"
   }
 }
