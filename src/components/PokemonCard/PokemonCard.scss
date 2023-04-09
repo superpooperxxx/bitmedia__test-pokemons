@@ -1,0 +1,39 @@
+@import '../../sassStyles/colors';
+
+.pokemon-card {
+  padding: 16px 32px 24px;
+
+  color: $color__text-main;
+
+  border: 1px solid $color__card-border;
+  border-radius: 16px;
+
+  &__image {
+    display: block;
+    width: 180px;
+    margin: 0 auto;
+  }
+
+  &__name {
+    margin-bottom: 4px;
+
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 36px;
+  }
+
+  &__type,
+  &__level {
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 24px;
+  }
+
+  &__type {
+    margin-bottom: 4px;
+  }
+
+  &__value {
+    font-weight: 400;
+  }
+}

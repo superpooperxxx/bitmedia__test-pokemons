@@ -1,0 +1,26 @@
+@import '../../sassStyles/colors';
+
+.pokemons-btns {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+
+  &__btn {
+    padding: 12px 24px;
+
+    font-size: 16px;
+    line-height: 24px;
+    color: $color__text-main;
+
+    border-radius: 12px;
+    background-color: $color__accent;
+
+    &--disabled {
+      background-color: $color__disabled;
+      color: $color__disabled-text;
+
+      // cursor: not-allowed;
+      pointer-events: none;
+    }
+  }
+}

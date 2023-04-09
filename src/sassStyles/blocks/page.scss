@@ -2,8 +2,13 @@
 
 .page {
   padding-top: 16px;
+  padding-bottom: 56px;
 
   @include onDesktop {
     padding-top: 24px;
+  }
+
+  &__header {
+    margin-bottom: 24px;
   }
 }
