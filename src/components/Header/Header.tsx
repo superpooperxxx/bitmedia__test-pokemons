@@ -6,7 +6,7 @@ import { Nav } from '../Nav';
 
 export const Header: React.FC = () => {
   return (
-    <header className="header">
+    <header className="header page__header">
       <Link to="/">
         <img
           src={Logo}
