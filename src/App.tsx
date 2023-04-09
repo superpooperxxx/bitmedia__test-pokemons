@@ -4,11 +4,15 @@ import './App.scss';
 import { HomePage } from './pages/Home';
 import { MyPokemonsPage } from './pages/MyPokemons';
 import { NotFoundPage } from './pages/NotFound';
+import { Header } from './components/Header/Header';
 
 export const App: React.FC = () => {
   return (
     <>
-      <header>Header</header>
+      <div className="container">
+        <Header />
+      </div>
+
       <Routes>
         <Route
           path="/"

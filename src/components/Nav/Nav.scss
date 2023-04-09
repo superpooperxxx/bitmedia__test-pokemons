@@ -1,0 +1,44 @@
+@import '../../sassStyles/colors';
+@import '../../sassStyles/mixins';
+
+.nav {
+  height: 56px;
+  padding: 4px;
+
+  border: 1px solid $color__text-main;
+  border-radius: 16px;
+
+  &__list {
+    display: flex;
+    gap: 4px;
+
+    max-width: 324px;
+    height: 100%;
+  }
+
+  &__link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 100%;
+    padding: 0 14px;
+
+    font-size: 12px;
+
+    color: $color__main;
+
+    border-radius: 12px;
+
+    @include onTablet {
+      padding: 0 24px;
+
+      font-size: 16px;
+      line-height: 24px;
+    }
+
+    &--active {
+      background-color: $color__text-main;
+    }
+  }
+}

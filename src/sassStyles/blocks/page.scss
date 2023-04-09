@@ -1,0 +1,9 @@
+@import '../mixins';
+
+.page {
+  padding-top: 16px;
+
+  @include onDesktop {
+    padding-top: 24px;
+  }
+}
