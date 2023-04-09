@@ -5,16 +5,16 @@
     "main.js.map": "/bitmedia__test-pokemons/static/js/main.9911b4b8.chunk.js.map",
     "runtime-main.js": "/bitmedia__test-pokemons/static/js/runtime-main.a74c7b65.js",
     "runtime-main.js.map": "/bitmedia__test-pokemons/static/js/runtime-main.a74c7b65.js.map",
-    "static/js/2.dc3f18f1.chunk.js": "/bitmedia__test-pokemons/static/js/2.dc3f18f1.chunk.js",
-    "static/js/2.dc3f18f1.chunk.js.map": "/bitmedia__test-pokemons/static/js/2.dc3f18f1.chunk.js.map",
+    "static/js/2.66315d54.chunk.js": "/bitmedia__test-pokemons/static/js/2.66315d54.chunk.js",
+    "static/js/2.66315d54.chunk.js.map": "/bitmedia__test-pokemons/static/js/2.66315d54.chunk.js.map",
     "index.html": "/bitmedia__test-pokemons/index.html",
     "static/css/main.c8a212f8.chunk.css.map": "/bitmedia__test-pokemons/static/css/main.c8a212f8.chunk.css.map",
-    "static/js/2.dc3f18f1.chunk.js.LICENSE.txt": "/bitmedia__test-pokemons/static/js/2.dc3f18f1.chunk.js.LICENSE.txt",
+    "static/js/2.66315d54.chunk.js.LICENSE.txt": "/bitmedia__test-pokemons/static/js/2.66315d54.chunk.js.LICENSE.txt",
     "static/media/pokemons-logo.8bdb2f0e.png": "/bitmedia__test-pokemons/static/media/pokemons-logo.8bdb2f0e.png"
   },
   "entrypoints": [
     "static/js/runtime-main.a74c7b65.js",
-    "static/js/2.dc3f18f1.chunk.js",
+    "static/js/2.66315d54.chunk.js",
     "static/css/main.c8a212f8.chunk.css",
     "static/js/main.9911b4b8.chunk.js"
   ]
