@@ -1,5 +1,9 @@
 @import './sassStyles/reset';
 
+// BLOCKS
+@import './sassStyles/blocks/container.scss';
+@import './sassStyles/blocks/page.scss';
+
 body {
   font-family: 'Poppins', sans-serif;
 }
