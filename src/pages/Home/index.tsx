@@ -50,13 +50,17 @@ export const HomePage: React.FC = () => {
     <main className="home-page">
       <div className="container">
         {isLoading && <Loader />}
-        <PokemonsList pokemons={pokemons} />
         {!isLoading && (
-          <PokemonsBtns
-            page={page}
-            maxPages={maxPages}
-            updatePage={handlePage}
-          />
+          <>
+            <PokemonsList pokemons={pokemons} />
+            {maxPages > 1 && (
+              <PokemonsBtns
+                page={page}
+                maxPages={maxPages}
+                updatePage={handlePage}
+              />
+            )}
+          </>
         )}
       </div>
     </main>

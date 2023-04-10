@@ -1,12 +1,22 @@
 @import '../../sassStyles/colors';
 
 .pokemon-card {
-  padding: 16px 32px 24px;
-
   color: $color__text-main;
 
   border: 1px solid $color__card-border;
   border-radius: 16px;
+
+  transition: transform 0.5s;
+
+  &:hover {
+    transform: scale(1.05);
+  }
+
+  &__btn {
+    width: 100%;
+    padding: 16px 32px 24px;
+    text-align: left;
+  }
 
   &__image {
     display: block;
