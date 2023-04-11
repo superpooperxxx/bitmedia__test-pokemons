@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 const BASE_URL = 'https://pokemons-api.herokuapp.com/api';
 
-type RequestMethod = 'GET' | 'POST';
+type RequestMethod = 'GET' | 'POST' | 'PATCH';
 
 function request<T>(
   url: string,
@@ -29,4 +29,5 @@ function request<T>(
 export const client = {
   get: <T>(url: string) => request<T>(url),
   post: <T>(url: string, data: any) => request<T>(url, 'POST', data),
+  patch: <T>(url: string, data: any) => request<T>(url, 'PATCH', data),
 };
