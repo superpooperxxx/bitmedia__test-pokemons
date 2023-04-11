@@ -1,3 +1,4 @@
+@import '../../sassStyles/mixins';
 @import '../../sassStyles/colors';
 
 .modal {
@@ -20,11 +21,16 @@
   position: relative;
 
   display: flex;
-  gap: 50px;
-  padding: 32px 70px;
+  gap: 20px;
+  padding: 32px 16px;
 
   background-color: $color__main;
   border-radius: 16px;
+
+  @include onTablet {
+    gap: 50px;
+    padding: 32px 70px;
+  }
 
   &__close {
     position: absolute;
@@ -54,8 +60,28 @@
     flex-direction: column;
   }
 
-  &__evolutions-img {
-    width: 180px;
+  &__evolution {
+  }
+
+  &__evolution-img {
+    display: block;
+    margin: 0 auto;
+    width: 100px;
+
+    @include onTablet {
+      width: 180px;
+    }
+  }
+
+  &__evolution-name {
+    text-align: center;
+
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 700;
+    color: $color__text-main;
+
+    transform: translateY(-100%);
   }
 
   &__text {
@@ -64,10 +90,15 @@
 
   &__name {
     padding-bottom: 8px;
-    font-size: 24px;
-    line-height: 36px;
+    font-size: 20px;
+    line-height: 25px;
 
     border-bottom: 1px solid $color__card-border;
+
+    @include onTablet {
+      font-size: 24px;
+      line-height: 36px;
+    }
   }
 
   &__list {
@@ -75,14 +106,19 @@
   }
 
   &__detail {
-    padding: 8px 0;
+    padding: 5px 0;
     padding-right: 8px;
 
-    font-size: 16px;
+    font-size: 14px;
     font-weight: 700;
     line-height: 24px;
 
     border-bottom: 1px solid $color__card-border;
+
+    @include onTablet {
+      padding: 8px 0;
+      font-size: 16px;
+    }
   }
 
   &__value {

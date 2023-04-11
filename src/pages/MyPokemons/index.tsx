@@ -1,19 +1,22 @@
-import React, { useEffect, useState, useCallback } from 'react';
+/* eslint-disable no-alert */
+// eslint-disable-next-line object-curly-newline
+import React, { useEffect, useState, useCallback, useContext } from 'react';
 import './MyPokemonsPage.scss';
 import { getPokemonsOfUser } from '../../api/userPokemons';
-import { Pokemon } from '../../types/pokemon';
 import { PokemonsList } from '../../components/PokemonsList';
 import { Loader } from '../../components/Loader';
 import { PokemonsBtns } from '../../components/PokemonsBtns';
+import { UserPokemonsContext } from '../../contexts/UserPokemonsProvider';
 
 declare global {
   interface Window {
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     ethereum?: any;
   }
 }
 
 export const MyPokemonsPage: React.FC = () => {
-  const [pokemons, setPokemons] = useState<Pokemon[]>([]);
+  const { pokemons, setPokemons } = useContext(UserPokemonsContext);
   const [isLoading, setIsLoading] = useState(true);
   const [page, setPage] = useState(1);
   const [maxPages, setMaxPages] = useState(0);

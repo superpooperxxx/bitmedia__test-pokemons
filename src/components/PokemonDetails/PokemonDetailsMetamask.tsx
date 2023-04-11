@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-non-null-assertion */
 /* eslint-disable operator-linebreak */
 import React from 'react';
 import cn from 'classnames';
@@ -6,26 +7,40 @@ import { Pokemon } from '../../types/pokemon';
 
 interface Props {
   isSigning: boolean;
-  signMessage: (message: string, pokemonId: string) => void;
+  addPokemon: (message: string) => void;
+  evolvePokemon: (message: string) => void;
   pokemon: Pokemon;
+  evolutionPokemon: Pokemon | null;
 }
 
 export const PokemonDetailsMetamask: React.FC<Props> = ({
   isSigning,
-  signMessage,
+  addPokemon,
+  evolvePokemon,
   pokemon,
+  evolutionPokemon,
 }) => {
   const location = useLocation();
   const path = location.pathname;
 
-  window.console.log(path);
-
-  const message =
-    path === '/my-pokemons'
-      ? `I want evolve ${pokemon.name} to {pokemonNameEvolved}`
-      : `I want add ${pokemon.name} to my list`;
-
-  const btnText = path === '/my-pokemons' ? 'Evolve' : 'Add to My list';
+  if (path === '/my-pokemons') {
+    return (
+      <button
+        type="button"
+        className={cn('pokemon-details__metamask', {
+          'pokemon-details__metamask--disabled':
+            isSigning || !pokemon.evolution.length,
+        })}
+        onClick={() => {
+          evolvePokemon(
+            `I want evolve ${pokemon.name} to ${evolutionPokemon!.name}`,
+          );
+        }}
+      >
+        Evolve
+      </button>
+    );
+  }
 
   return (
     <button
@@ -34,10 +49,10 @@ export const PokemonDetailsMetamask: React.FC<Props> = ({
         'pokemon-details__metamask--disabled': isSigning,
       })}
       onClick={() => {
-        signMessage(message, pokemon.id);
+        addPokemon(`I want add ${pokemon.name} to my list`);
       }}
     >
-      {btnText}
+      Add to My list
     </button>
   );
 };

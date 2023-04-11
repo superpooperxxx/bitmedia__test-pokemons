@@ -1,10 +1,11 @@
+/* eslint-disable no-alert */
 /* eslint-disable no-undef */
 /* eslint-disable consistent-return */
 
 export const signMessage = async (message) => {
   try {
     if (typeof window.ethereum === 'undefined') {
-      throw new Error('No crypto wallet found!');
+      throw new Error('No crypto wallet was found 🥲');
     }
 
     await window.ethereum.request({
@@ -18,6 +19,6 @@ export const signMessage = async (message) => {
 
     return signature;
   } catch (error) {
-    window.alert('The signing was rejected');
+    window.alert(error.message);
   }
 };
